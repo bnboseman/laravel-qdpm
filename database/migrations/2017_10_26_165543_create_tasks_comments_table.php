@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateTasksCommentsTable extends Migration
 {
@@ -45,7 +45,6 @@ class CreateTasksCommentsTable extends Migration
                 ->on('tasks_priority')
                 ->onDelete('set null')
                 ->onUpdate('set null');
-
         });
     }
 

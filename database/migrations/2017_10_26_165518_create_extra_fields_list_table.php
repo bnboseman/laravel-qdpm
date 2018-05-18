@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateExtraFieldsListTable extends Migration
 {
@@ -23,7 +23,6 @@ class CreateExtraFieldsListTable extends Migration
                 ->on('extra_fields')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            
         });
     }
 
