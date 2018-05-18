@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateTicketsCommentsTable extends Migration
 {
@@ -21,7 +21,7 @@ class CreateTicketsCommentsTable extends Migration
             $table->integer('tickets_status_id')->nullable();
             $table->timestamps();
 
-             $table->foreign('ticket_id')
+            $table->foreign('ticket_id')
                 ->references('id')
                 ->on('tickets')
                 ->onDelete('cascade')
@@ -36,7 +36,6 @@ class CreateTicketsCommentsTable extends Migration
                 ->on('tickets_status')
                 ->onDelete('set null')
                 ->onUpdate('set null');
-
         });
     }
 
